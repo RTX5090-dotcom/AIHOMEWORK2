@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paradigm | Home</title>
+  <title>Paradigm Shift - Home</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- Header -->
   <header>
-    <div class="container header-container">
+    <div class="header-container container">
       <div class="logo">
         <h1>Paradigm</h1>
       </div>
@@ -25,47 +25,60 @@
     </div>
   </header>
 
-  <!-- Hero Slider Section -->
+  <!-- Hero Slider -->
   <section class="hero-slider">
-    <div class="slide">Slide 1 Placeholder</div>
-    <div class="slide">Slide 2 Placeholder</div>
-    <div class="slide">Slide 3 Placeholder</div>
+    <div class="slide">
+      <h2>Slide 1 Title</h2>
+      <p>Slide 1 description goes here.</p>
+      <button class="button">Learn More</button>
+    </div>
+    <div class="slide">
+      <h2>Slide 2 Title</h2>
+      <p>Slide 2 description goes here.</p>
+      <button class="button">Learn More</button>
+    </div>
+    <div class="slide">
+      <h2>Slide 3 Title</h2>
+      <p>Slide 3 description goes here.</p>
+      <button class="button">Learn More</button>
+    </div>
   </section>
 
-  <!-- About Preview Section -->
+  <!-- About Preview -->
   <section class="about-preview container">
     <div class="about-image">
-      <img src="images/hero/about-placeholder.jpg" alt="About Image">
+      <img src="images/about/about1.jpg" alt="About Image 1">
     </div>
     <div class="about-text">
-      <h2>About Paradigm</h2>
-      <p>Short introduction about the site or creator. Learn more about our mission and vision.</p>
+      <h2>About Us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis rutrum lorem. Curabitur nec eros vitae neque lacinia faucibus.</p>
       <a href="about.html" class="button">Read More</a>
     </div>
   </section>
 
-  <!-- Services / Features Section -->
-  <section class="services container">
-    <h2>Our Features</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>Feature 1</h3>
-        <p>Description of feature one.</p>
-      </div>
-      <div class="card">
-        <h3>Feature 2</h3>
-        <p>Description of feature two.</p>
-      </div>
-      <div class="card">
-        <h3>Feature 3</h3>
-        <p>Description of feature three.</p>
-      </div>
+  <!-- Services / Features -->
+  <section class="card-grid container">
+    <div class="card">
+      <h3>Service 1</h3>
+      <p>Short description of Service 1.</p>
+    </div>
+    <div class="card">
+      <h3>Service 2</h3>
+      <p>Short description of Service 2.</p>
+    </div>
+    <div class="card">
+      <h3>Service 3</h3>
+      <p>Short description of Service 3.</p>
+    </div>
+    <div class="card">
+      <h3>Service 4</h3>
+      <p>Short description of Service 4.</p>
     </div>
   </section>
 
-  <!-- Gallery Preview Section -->
+  <!-- Gallery Preview -->
   <section class="gallery-preview container">
-    <h2>Gallery Preview</h2>
+    <h2>Gallery</h2>
     <div class="gallery-grid">
       <img src="images/gallery/image1.jpg" alt="Gallery Image 1">
       <img src="images/gallery/image2.jpg" alt="Gallery Image 2">
@@ -74,39 +87,38 @@
       <img src="images/gallery/image5.jpg" alt="Gallery Image 5">
       <img src="images/gallery/image6.jpg" alt="Gallery Image 6">
     </div>
-    <a href="gallery.html" class="button">View Full Gallery</a>
+    <a href="gallery.html" class="button" style="margin-top:24px; display:inline-block;">View All</a>
   </section>
 
-  <!-- Call to Action Section -->
-  <section class="call-to-action container">
-    <h2>Get Involved</h2>
-    <p>Encourage visitors to take action, such as contacting or exploring more content.</p>
+  <!-- Call to Action -->
+  <section class="call-to-action">
+    <h2>Ready to Get Started?</h2>
+    <p>Contact us today to start your project with Paradigm.</p>
     <a href="contact.html" class="button">Contact Us</a>
   </section>
 
-  <!-- Contact Preview Section -->
+  <!-- Contact Preview -->
   <section class="contact-preview container">
     <h2>Contact Us</h2>
-    <form action="#" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Your Name">
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Your Email">
-
-      <label for="subject">Subject:</label>
-      <input type="text" id="subject" name="subject" placeholder="Subject">
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" placeholder="Write your message"></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
+    <div class="contact-form">
+      <form action="#" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name">
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+        
+        <button type="submit" class="button">Send Message</button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="container footer-container">
+    <div class="container">
       <p>&copy; 2026 Paradigm. All rights reserved.</p>
     </div>
   </footer>
