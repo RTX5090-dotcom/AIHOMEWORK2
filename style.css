@@ -1,5 +1,5 @@
 /* ================================
-   Layer 1: Global Styles & Layout
+   Full Style.css – Paradigm Shift Approximation
    ================================ */
 
 /* 1. Global Reset */
@@ -11,7 +11,6 @@
   box-sizing: border-box;
 }
 
-/* Remove list styles and link underlines globally */
 ul {
   list-style: none;
 }
@@ -21,50 +20,59 @@ a {
   color: inherit;
 }
 
-/* 2. Body Typography */
+/* 2. Typography */
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  color: #222;
+  color: #333;
   background-color: #fff;
 }
 
-/* 3. Container Width */
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+/* 3. Container */
 .container {
   width: 90%;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
 }
 
-/* 4. Section Spacing */
+/* 4. Sections */
 section {
-  padding: 64px 0; /* 64px vertical spacing as base section padding */
+  padding: 80px 0;
 }
 
-/* 5. Basic Button Styles */
+/* 5. Buttons */
 .button,
 button {
   display: inline-block;
-  padding: 12px 24px;
-  background-color: #0077cc; /* Placeholder primary color */
+  padding: 14px 28px;
+  background-color: #2a9df4;
   color: #fff;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .button:hover,
 button:hover {
-  background-color: #005fa3; /* Darker on hover */
+  background-color: #1e7ec8;
 }
 
-/* 6. Header and Navigation Basic Layout */
+/* 6. Header & Nav */
 header {
   width: 100%;
   background-color: #fff;
@@ -75,58 +83,55 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
+  padding: 20px 0;
 }
 
 .logo h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
 .main-nav .nav-list {
   display: flex;
-  gap: 24px; /* spacing between links */
+  gap: 32px;
 }
 
 .main-nav .nav-list li a {
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .main-nav .nav-list li a:hover {
-  color: #0077cc; /* placeholder hover color */
+  color: #2a9df4;
 }
 
-
 /* ================================
-   Layer 2: Section-specific Styles
-   ================================ */
-
-/* 1. Hero Slider Styling */
+   Hero Slider */
 .hero-slider {
   display: flex;
   overflow: hidden;
   gap: 16px;
-  min-height: 400px; /* placeholder height */
+  min-height: 450px;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #f5f5f5; /* placeholder background */
+  background-color: #f5f5f5;
 }
 
 .hero-slider .slide {
   flex: 1 0 100%;
-  padding: 64px 16px;
-  background-color: #e0e0e0; /* placeholder slide color */
+  padding: 80px 16px;
+  background-color: #e9ecef;
   border-radius: 8px;
 }
 
-/* 2. About Section Two Column Layout */
+/* ================================
+   About Section */
 .about-preview,
 .about-section .about-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 48px;
   align-items: center;
 }
 
@@ -140,30 +145,37 @@ header {
   flex: 1 1 300px;
 }
 
-/* Reverse layout for alternating section */
 .about-section .two-column.reverse {
   flex-direction: row-reverse;
 }
 
-/* 3. Services / Cards Layout */
+/* ================================
+   Services / Cards */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
+  gap: 32px;
 }
 
 .card {
   background-color: #f9f9f9;
-  padding: 24px;
+  padding: 28px;
   border-radius: 8px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 4. Gallery Preview Grid */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ================================
+   Gallery */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
+  gap: 20px;
 }
 
 .gallery-grid img {
@@ -179,18 +191,19 @@ header {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* 5. Call to Action Section */
+/* ================================
+   Call to Action */
 .call-to-action {
   text-align: center;
-  background-color: #0077cc; /* placeholder background */
+  background-color: #2a9df4;
   color: #fff;
-  padding: 64px 16px;
+  padding: 80px 16px;
   border-radius: 8px;
 }
 
 .call-to-action .button {
   background-color: #fff;
-  color: #0077cc;
+  color: #2a9df4;
 }
 
 .call-to-action .button:hover {
@@ -198,24 +211,7 @@ header {
 }
 
 /* ================================
-   Layer 3: Page-specific Enhancements
-   ================================ */
-
-/* 1. About Page Alternating Layout */
-.about-section .two-column {
-  gap: 48px;
-}
-
-.about-section .two-column.reverse {
-  flex-direction: row-reverse;
-}
-
-/* 2. Gallery Page Grid Spacing already set, enhanced hover */
-.gallery-grid {
-  gap: 20px;
-}
-
-/* 3. Contact Page Form Layout */
+   Contact Form */
 .contact-form form {
   display: flex;
   flex-direction: column;
@@ -228,7 +224,7 @@ header {
 
 .contact-form input,
 .contact-form textarea {
-  padding: 12px;
+  padding: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-family: inherit;
@@ -242,10 +238,17 @@ header {
 }
 
 /* ================================
-   Responsive Breakpoints
-   ================================ */
+   Footer */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #555;
+}
 
-/* Tablet */
+/* ================================
+   Responsive */
 @media (max-width: 768px) {
   .about-preview,
   .about-section .about-content {
@@ -258,7 +261,6 @@ header {
   }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
   .container {
     width: 95%;
@@ -267,10 +269,10 @@ header {
   }
 
   .hero-slider .slide {
-    padding: 32px 8px;
+    padding: 40px 8px;
   }
 
   .call-to-action {
-    padding: 32px 8px;
+    padding: 40px 8px;
   }
 }
