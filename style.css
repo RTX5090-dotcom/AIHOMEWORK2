@@ -1,6 +1,17 @@
-/* ================================
-   Full Style.css – Paradigm Shift Approximation
-   ================================ */
+/* ----------------------------
+   Global Color Variables
+   ---------------------------- */
+:root {
+  --color-primary: #49FCD4;
+  --color-secondary: #7D75FF;
+  --color-accent: #FF6A6A;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-text: #111111;
+  --color-bg-light: #F9F9F9;
+  --color-bg-dark: #111111;
+  --color-border: #DDD;
+}
 
 /* 1. Global Reset */
 *,
@@ -20,63 +31,57 @@ a {
   color: inherit;
 }
 
-/* 2. Typography */
+/* 2. Body Typography */
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  color: #333;
-  background-color: #fff;
+  color: var(--color-text);
+  background-color: var(--color-white);
 }
 
+/* 3. Headings */
 h1, h2, h3, h4, h5 {
   font-weight: 700;
-  line-height: 1.2;
   margin-bottom: 16px;
 }
 
-p {
-  margin-bottom: 16px;
-}
-
-/* 3. Container */
+/* 4. Containers */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 0 16px;
 }
 
-/* 4. Sections */
+/* 5. Sections */
 section {
   padding: 80px 0;
 }
 
-/* 5. Buttons */
+/* 6. Buttons */
 .button,
 button {
   display: inline-block;
   padding: 14px 28px;
-  background-color: #2a9df4;
-  color: #fff;
+  background-color: var(--color-accent);
+  color: var(--color-white);
   border: none;
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .button:hover,
 button:hover {
-  background-color: #1e7ec8;
+  opacity: 0.85;
 }
 
-/* 6. Header & Nav */
+/* 7. Header & Navigation */
 header {
-  width: 100%;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .header-container {
@@ -89,6 +94,7 @@ header {
 .logo h1 {
   font-size: 1.8rem;
   font-weight: 700;
+  color: var(--color-black);
 }
 
 .main-nav .nav-list {
@@ -98,15 +104,14 @@ header {
 
 .main-nav .nav-list li a {
   font-weight: 600;
-  transition: color 0.3s ease;
+  color: var(--color-black);
 }
 
 .main-nav .nav-list li a:hover {
-  color: #2a9df4;
+  color: var(--color-primary);
 }
 
-/* ================================
-   Hero Slider */
+/* 8. Hero Slider */
 .hero-slider {
   display: flex;
   overflow: hidden;
@@ -114,19 +119,18 @@ header {
   min-height: 450px;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  background-color: #f5f5f5;
+  background-color: var(--color-bg-light);
 }
 
 .hero-slider .slide {
   flex: 1 0 100%;
   padding: 80px 16px;
-  background-color: #e9ecef;
+  background-color: var(--color-bg-light);
   border-radius: 8px;
+  text-align: center;
 }
 
-/* ================================
-   About Section */
+/* 9. About Section */
 .about-preview,
 .about-section .about-content {
   display: flex;
@@ -149,8 +153,7 @@ header {
   flex-direction: row-reverse;
 }
 
-/* ================================
-   Services / Cards */
+/* 10. Cards */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -158,7 +161,7 @@ header {
 }
 
 .card {
-  background-color: #f9f9f9;
+  background-color: var(--color-bg-light);
   padding: 28px;
   border-radius: 8px;
   text-align: center;
@@ -170,8 +173,7 @@ header {
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* ================================
-   Gallery */
+/* 11. Gallery Grid */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -191,27 +193,25 @@ header {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* ================================
-   Call to Action */
+/* 12. Call to Action */
 .call-to-action {
   text-align: center;
-  background-color: #2a9df4;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-black);
   padding: 80px 16px;
   border-radius: 8px;
 }
 
 .call-to-action .button {
-  background-color: #fff;
-  color: #2a9df4;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
 }
 
 .call-to-action .button:hover {
-  background-color: #e0e0e0;
+  background-color: var(--color-accent);
 }
 
-/* ================================
-   Contact Form */
+/* 13. Contact Form */
 .contact-form form {
   display: flex;
   flex-direction: column;
@@ -225,7 +225,7 @@ header {
 .contact-form input,
 .contact-form textarea {
   padding: 14px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   border-radius: 4px;
   font-family: inherit;
   font-size: 1rem;
@@ -233,46 +233,19 @@ header {
   resize: vertical;
 }
 
-.contact-form button {
-  align-self: flex-start;
-}
-
-/* ================================
-   Footer */
+/* 14. Footer */
 footer {
   text-align: center;
   padding: 40px 0;
-  border-top: 1px solid #ddd;
+  background-color: var(--color-bg-dark);
+  color: var(--color-white);
   font-size: 0.9rem;
-  color: #555;
 }
 
-/* ================================
-   Responsive */
+/* 15. Responsive */
 @media (max-width: 768px) {
-  .about-preview,
-  .about-section .about-content {
-    flex-direction: column;
-  }
-
   .main-nav .nav-list {
     flex-direction: column;
     gap: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    width: 95%;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-
-  .hero-slider .slide {
-    padding: 40px 8px;
-  }
-
-  .call-to-action {
-    padding: 40px 8px;
   }
 }
